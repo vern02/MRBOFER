@@ -1,0 +1,9 @@
+cv2
+nltk
+numpy
+joblib
+streamlit
+scikit-learn
+streamlit-extras
+streamlit_option_menu
+opencv-python-headless
