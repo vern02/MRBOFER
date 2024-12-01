@@ -227,7 +227,10 @@ def process_frame(frm):
     return pred
 
 # Load the stress model
-best_model_path = "/Users/vernsin/Documents/UCOMS/FER/Stress_Model.joblib"
+# best_model_path = "/Users/vernsin/Documents/UCOMS/FER/Stress_Model.joblib"
+
+best_model_path_1 = os.path.join(os.path.dirname(__file__), 'Stress_Model.joblib')
+best_model_path = joblib.load(best_model_path_1)
 
 if os.path.exists(best_model_path):
     best_model = joblib.load(best_model_path)
