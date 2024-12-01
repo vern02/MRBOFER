@@ -60,13 +60,13 @@ def is_valid_password(password):
 # model = load_model("/Users/vernsin/Documents/UCOMS/FER/model.keras")
 # label = np.load("/Users/vernsin/Documents/UCOMS/FER/labels.npy")
 
-# Keras Model
+# Load Keras Model
 model_1 = os.path.join(os.path.dirname(__file__), 'model.keras')
-model = joblib.load(model_1)
+model = load_model(model_1)
 
-# Emotion Label
+# Load Emotion Labels
 label_1 = os.path.join(os.path.dirname(__file__), 'labels.npy')
-label = joblib.load(label_1)
+label = np.load(label_1)
 
 # Initialize Mediapipe for holistic (face and hand landmarks)
 holistic = mp.solutions.holistic
