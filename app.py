@@ -43,6 +43,10 @@ df = pd.read_csv("Stress.csv")
 #     "Current CGPA", "Waiver/Scholarship", "Anxiety Label", "Stress Label", "Depression Label"
 # ])
 
+import firebase_admin
+from firebase_admin import credentials
+import streamlit as st
+
 # Access Firebase credentials from the secrets
 cred = credentials.Certificate({
     "type": st.secrets["firebase"]["type"],
