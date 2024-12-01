@@ -239,10 +239,10 @@ def process_frame(frm):
 best_model_path_1 = os.path.join(os.path.dirname(__file__), 'Stress_Model.joblib')
 best_model_path = joblib.load(best_model_path_1)
 
-if os.path.exists(best_model_path):
-    best_model = joblib.load(best_model_path)
-else:
-    st.error("Best model file not found!")
+# if os.path.exists(best_model_path):
+#     best_model = joblib.load(best_model_path)
+# else:
+#     st.error("Best model file not found!")
 
 # Function for making predictions and recommending music
 def predict_stress_level(total_score):
