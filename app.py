@@ -25,28 +25,23 @@ from firebase_admin import credentials, auth
 from streamlit_option_menu import option_menu
 from spotipy.oauth2 import SpotifyClientCredentials
 
-from pymongo import MongoClient
-
-# Connection
-client = MongoClient("mongodb://localhost:27017/")
-db = client["MRBOFER"]  # Database name
-collection = db["Stress"]  # Collection name
-
-# Fetch
-def view_all_data():
-    data = list(collection.find())  # Fetch all documents in the collection
-    return data
+# # Fetch
+# def view_all_data():
+#     data = list(collection.find())  # Fetch all documents in the collection
+#     return data
     
 # configure the Streamlit app
 st.set_page_config(page_title="VibezVision", page_icon="🌍", layout="wide")
 
 # Fetch data using a custom query function and convert it to a Pandas DataFrame
-result = view_all_data()
+# result = view_all_data()
 
-df = pd.DataFrame(result, columns=[
-    "Age", "Gender", "University", "Department", "Academic Year",
-    "Current CGPA", "Waiver/Scholarship", "Anxiety Label", "Stress Label", "Depression Label"
-])
+df = pd.read_csv("Stress.csv")
+
+# df = pd.DataFrame(result, columns=[
+#     "Age", "Gender", "University", "Department", "Academic Year",
+#     "Current CGPA", "Waiver/Scholarship", "Anxiety Label", "Stress Label", "Depression Label"
+# ])
 
 # Initialize Firebase
 cred = credentials.Certificate("mrbofer-65af7-4e552797743e.json")
