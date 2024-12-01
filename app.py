@@ -391,7 +391,8 @@ def app():
         col1, col2, col3 = st.columns([1.6, 1, 1])
 
         with col2:
-            st.image("/Users/vernsin/Documents/UCOMS/FER/Streamlit/Camera.png", width=200)
+            # st.image("/Users/vernsin/Documents/UCOMS/FER/Streamlit/Camera.png", width=200)
+            st.image("Camera.png", width=200)
 
         # Login form
         st.subheader("Login to Your Account")
@@ -463,7 +464,8 @@ def app():
         col1, col2, col3 = st.columns([1.6, 1, 1])
 
         with col2:
-            st.image("/Users/vernsin/Documents/UCOMS/FER/Streamlit/Camera.png", width=200)
+            # st.image("/Users/vernsin/Documents/UCOMS/FER/Streamlit/Camera.png", width=200)
+            st.image("Camera.png", width=200)
 
         # Sign-up form
         st.subheader("Create a New Account")
