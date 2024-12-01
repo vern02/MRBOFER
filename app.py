@@ -60,9 +60,15 @@ def is_valid_password(password):
 # model = load_model("/Users/vernsin/Documents/UCOMS/FER/model.keras")
 # label = np.load("/Users/vernsin/Documents/UCOMS/FER/labels.npy")
 
-# Load Keras Model
 model_1 = os.path.join(os.path.dirname(__file__), 'model.keras')
-model = load_model(model_1)
+if not os.path.isfile(model_1):
+    print(f"Error: {model_1} does not exist.")
+else:
+    model = load_model(model_1)
+    
+# # Load Keras Model
+# model_1 = os.path.join(os.path.dirname(__file__), 'model.keras')
+# model = load_model(model_1)
 
 # Load Emotion Labels
 label_1 = os.path.join(os.path.dirname(__file__), 'labels.npy')
