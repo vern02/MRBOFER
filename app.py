@@ -49,9 +49,17 @@ def is_valid_email(email):
 def is_valid_password(password):
     return len(password) >= 8
 
-# Load a pre-trained Keras model and label file for emotion detection
-model = load_model("/Users/vernsin/Documents/UCOMS/FER/model.keras")
-label = np.load("/Users/vernsin/Documents/UCOMS/FER/labels.npy")
+# # Load a pre-trained Keras model and label file for emotion detection
+# model = load_model("/Users/vernsin/Documents/UCOMS/FER/model.keras")
+# label = np.load("/Users/vernsin/Documents/UCOMS/FER/labels.npy")
+
+# Keras Model
+model_1 = os.path.join(os.path.dirname(__file__), 'model.keras')
+model = joblib.load(model_1)
+
+# Emotion Label
+label_1 = os.path.join(os.path.dirname(__file__), 'labels.npy')
+label = joblib.load(label_1)
 
 # Initialize Mediapipe for holistic (face and hand landmarks)
 holistic = mp.solutions.holistic
