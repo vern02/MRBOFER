@@ -12,3 +12,4 @@ keras
 tensorflow
 streamlit-option-menu
 opencv-python-headless
+pymango
