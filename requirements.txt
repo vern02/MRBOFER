@@ -13,3 +13,4 @@ tensorflow
 streamlit-option-menu
 opencv-python-headless
 pymongo
+sklearn
