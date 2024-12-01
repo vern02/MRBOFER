@@ -1,4 +1,3 @@
-opencv-python-headless
 joblib
 spotipy
 numpy
@@ -12,4 +11,4 @@ matplotlib
 keras
 tensorflow
 streamlit-option-menu
-cv2
+opencv-python-headless
