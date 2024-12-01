@@ -61,11 +61,11 @@ def is_valid_password(password):
 # label = np.load("/Users/vernsin/Documents/UCOMS/FER/labels.npy")
     
 # Load Keras Model
-model_1 = os.path.join(os.path.dirname(__file__), "model.keras")
+model_1 = os.path.join(os.path.dirname(__file__), 'model.keras')
 model = load_model(model_1)
 
 # Load Emotion Labels
-label_1 = os.path.join(os.path.dirname(__file__), "labels.npy")
+label_1 = os.path.join(os.path.dirname(__file__), 'labels.npy')
 label = np.load(label_1)
 
 # Initialize Mediapipe for holistic (face and hand landmarks)
@@ -236,7 +236,7 @@ def process_frame(frm):
 # Load the stress model
 # best_model_path = "/Users/vernsin/Documents/UCOMS/FER/Stress_Model.joblib"
 
-best_model_path_1 = os.path.join(os.path.dirname(__file__), "Stress_Model.joblib")
+best_model_path_1 = os.path.join(os.path.dirname(__file__), 'Stress_Model.joblib')
 best_model_path = joblib.load(best_model_path_1)
 
 if os.path.exists(best_model_path):
