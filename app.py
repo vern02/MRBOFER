@@ -59,19 +59,13 @@ def is_valid_password(password):
 # # Load a pre-trained Keras model and label file for emotion detection
 # model = load_model("/Users/vernsin/Documents/UCOMS/FER/model.keras")
 # label = np.load("/Users/vernsin/Documents/UCOMS/FER/labels.npy")
-
-model_1 = os.path.join(os.path.dirname(__file__), 'model.keras')
-if not os.path.isfile(model_1):
-    print(f"Error: {model_1} does not exist.")
-else:
-    model = load_model(model_1)
     
-# # Load Keras Model
-# model_1 = os.path.join(os.path.dirname(__file__), 'model.keras')
-# model = load_model(model_1)
+# Load Keras Model
+model_1 = os.path.join(os.path.dirname(__file__), "model.keras")
+model = load_model(model_1)
 
 # Load Emotion Labels
-label_1 = os.path.join(os.path.dirname(__file__), 'labels.npy')
+label_1 = os.path.join(os.path.dirname(__file__), "labels.npy")
 label = np.load(label_1)
 
 # Initialize Mediapipe for holistic (face and hand landmarks)
@@ -242,7 +236,7 @@ def process_frame(frm):
 # Load the stress model
 # best_model_path = "/Users/vernsin/Documents/UCOMS/FER/Stress_Model.joblib"
 
-best_model_path_1 = os.path.join(os.path.dirname(__file__), 'Stress_Model.joblib')
+best_model_path_1 = os.path.join(os.path.dirname(__file__), "Stress_Model.joblib")
 best_model_path = joblib.load(best_model_path_1)
 
 if os.path.exists(best_model_path):
