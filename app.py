@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 
 # Import custom functions from Query.py
-from Query import *
+# from Query import *
 
 # Additional imports for working with files and Keras
 from io import BytesIO
@@ -25,6 +25,18 @@ from firebase_admin import credentials, auth
 from streamlit_option_menu import option_menu
 from spotipy.oauth2 import SpotifyClientCredentials
 
+from pymongo import MongoClient
+
+# Connection
+client = MongoClient("mongodb://localhost:27017/")
+db = client["MRBOFER"]  # Database name
+collection = db["Stress"]  # Collection name
+
+# Fetch
+def view_all_data():
+    data = list(collection.find())  # Fetch all documents in the collection
+    return data
+    
 # configure the Streamlit app
 st.set_page_config(page_title="VibezVision", page_icon="🌍", layout="wide")
 
