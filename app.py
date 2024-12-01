@@ -37,6 +37,7 @@ st.set_page_config(page_title="VibezVision", page_icon="🌍", layout="wide")
 # result = view_all_data()
 
 df = pd.read_csv("Stress.csv")
+st.dataframe(df)
 
 # df = pd.DataFrame(result, columns=[
 #     "Age", "Gender", "University", "Department", "Academic Year",
